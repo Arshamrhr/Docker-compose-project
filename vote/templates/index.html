@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vote</title>
+    <style>
+      body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; display: grid; place-items: center; min-height: 80vh; background: #f4f4f4; }
+      h1 { color: #333; }
+      .container { text-align: center; background: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 6px 15px rgba(0,0,0,0.07); }
+      form { display: flex; gap: 20px; margin-top: 25px; }
+      button {
+        font-size: 2rem; 
+        padding: 20px 40px; 
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer;
+        transition: all 0.2s ease;
+        font-weight: bold;
+      }
+      button[value="ronaldo"] { background: #0088cc; color: white; }
+      button[value="messi"] { background: #d00040; color: white; }
+      button:hover { transform: scale(1.05); box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Who is the GOAT?</h1>
+        <form method="POST">
+            <button name="vote" value="ronaldo">Ronaldo</button>
+            <button name="vote" value="messi">Messi</button>
+        </form>
+    </div>
+</body>
+</html>

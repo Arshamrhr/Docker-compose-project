@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- This meta tag makes the page refresh every 2 seconds -->
+    <meta http-equiv="refresh" content="2">
+    <title>Results</title>
+    <style>
+      body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; display: grid; place-items: center; min-height: 80vh; background: #fdfdfd; }
+      .container { text-align: center; background: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 6px 15px rgba(0,0,0,0.07); min-width: 300px; }
+      h1 { color: #333; margin-top: 0; }
+      .results { font-size: 2rem; margin-top: 20px; }
+      .result { margin: 15px 0; padding: 10px; border-radius: 8px; }
+      .ronaldo { color: #0088cc; font-weight: bold; background: #f0f8ff; }
+      .messi { color: #d00040; font-weight: bold; background: #fff0f5; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Current Results</h1>
+        <div class="results">
+            <!-- These '{{ ronaldo }}' are template placeholders filled by Flask -->
+            <div class="result ronaldo">Ronaldo: {{ ronaldo }}</div>
+            <div class="result messi">Messi: {{ messi }}</div>
+        </div>
+    </div>
+</body>
+</html>

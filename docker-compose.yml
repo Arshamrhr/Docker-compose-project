@@ -1,0 +1,56 @@
+version: '3.8'
+
+services:
+  
+  # The "Vote" application
+  vote:
+    # Build the image from the Dockerfile in the './vote' directory
+    build: ./vote
+    container_name: vote-app
+    # Pass the name of the Redis service as an environment variable
+    environment:
+      - REDIS_HOST=redis
+    # Map port 5000 on the host machine to port 80 in the container
+    ports:
+      - "5000:80"
+    # Connect this service to our custom network
+    networks:
+      - votenet
+    # This service depends on 'redis' to be running
+    depends_on:
+      - redis
+
+  # The "Result" application
+  result:
+    # Build the image from the Dockerfile in the './result' directory
+    build: ./result
+    container_name: result-app
+    environment:
+      - REDIS_HOST=redis
+    # Map port 5001 on the host machine to port 80 in the container
+    ports:
+      - "5001:80"
+    networks:
+      - votenet
+    depends_on:
+      - redis
+
+  # The Redis database
+  redis:
+    # Use a pre-built image from Docker Hub
+    image: "redis:alpine"
+    container_name: redis-db
+    networks:
+      - votenet
+    # This ensures vote data persists even if the container restarts
+    volumes:
+      - redis-data:/data
+
+# Define the network
+networks:
+  votenet:
+    driver: bridge
+
+# Define the volume
+volumes:
+  redis-data:
