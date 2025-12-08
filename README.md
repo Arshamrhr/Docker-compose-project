@@ -1,1 +1,1 @@
-I built this project to learndocker compose
+I built this project to learn docker compose
