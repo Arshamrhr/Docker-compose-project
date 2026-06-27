@@ -1,14 +1,14 @@
-#what is this
+# What is this
 
 its also simple exapmle for undrestanding docker and docker-compose
 
-##how it works
+## How it works
 
-it has two python app and one database
+**It has two python app and one database**
 1. vote app asks the question
 2. the result stores in the redis (a fast datatbdase that uses ram to store the data)
 3. the result app gets the data from redis and shows it
 
-##how to use it
+## How to use it
 1.Clone the repo: git clone https://github.com/arshamrhr/
 2.run the docker-compose: docekr compose up -d (sudo docker-compose up -d)
