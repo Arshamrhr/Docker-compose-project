@@ -4,7 +4,7 @@ its also simple exapmle for undrestanding docker and docker-compose
 
 ##how it works
 
-*it has two python app *
+it has two python app and one database
 1. vote app asks the question
 2. the result stores in the redis (a fast datatbdase that uses ram to store the data)
 3. the result app gets the data from redis and shows it
