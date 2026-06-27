@@ -11,4 +11,5 @@ its also simple exapmle for undrestanding docker and docker-compose
 
 ## How to use it
 1.Clone the repo: git clone https://github.com/arshamrhr/
+
 2.run the docker-compose: docekr compose up -d (sudo docker-compose up -d)
