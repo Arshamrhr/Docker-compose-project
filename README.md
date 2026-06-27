@@ -10,6 +10,6 @@ its also simple exapmle for undrestanding docker and docker-compose
 3. the result app gets the data from redis and shows it
 
 ## How to use it
-1.Clone the repo: git clone https://github.com/arshamrhr/
+1.Clone the repo: git clone https://github.com/Arshamrhr/voting-app-with-docker.git
 
 2.run the docker-compose: docekr compose up -d (sudo docker-compose up -d)
